@@ -77,14 +77,11 @@ It runs each test case with and without the skill (or against an older version),
 
 ## Installation
 
-Both skills need to be installed:
-
-```
-/install long-term-task-orchestration
-/install skill-eval
+```bash
+npx skills add hixuanxuan/long-running-agent-tasks -y
 ```
 
-`skill-eval` does not need to be activated manually. When `long-term-task-orchestration` reaches the eval stage, it invokes `skill-eval` automatically.
+Both skills (`long-term-task-orchestration` and `skill-eval`) are installed in one command. `skill-eval` does not need to be activated manually — when `long-term-task-orchestration` reaches the eval stage, it invokes `skill-eval` automatically.
 
 ## Usage
 
