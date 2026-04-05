@@ -67,9 +67,9 @@ Write review results to `.task-data/segments/chunk_src__utils-output.json`, form
 Output file must be valid JSON; every entry in the findings array must contain file, line, trigger, impact, suggestion fields.
 
 ## IMPORTANT
-**You are the leaf executor of this task; you must complete all work directly and must not invoke Agent tools to launch sub-Agents.**
+Complete this task directly. If part of the work genuinely exceeds what can be handled in a single context window (e.g., too many files to process at once), you may use Agent tools to further delegate — but keep any nesting minimal and targeted. Always write your output to the specified path.
 ```
-**When the Agent judges a task as complex, it tends to call Agent tools to break it down; subagent prompts must explicitly prohibit this and explain why — no recursive nesting.**
+**Subagent prompts should guide the Agent's nesting behavior, not flatly prohibit it: for bounded tasks, complete directly; for genuinely complex tasks that would overflow a single context window, nesting is permitted. The goal is preventing gratuitous recursion, not eliminating nesting entirely.**
 
 ---
 
